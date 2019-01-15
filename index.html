@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html prefix="
+   xhv: http://www.w3.org/1999/xhtml/vocab#
+   xsd: http://www.w3.org/2001/XMLSchema#
+   rdfs: http://www.w3.org/2000/01/rdf-schema#
+   dc: http://purl.org/dc/terms/
+   vcard: http://www.w3.org/2006/vcard/ns#
+   v: http://rdf.data-vocabulary.org/#" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>JSON-ST - JSON Simply Typed</title>
+      <!-- Meta Tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Style Sheets -->
+      <link rel="stylesheet" type="text/css" href="./index_files/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="./index_files/bootstrap-responsive.css">
+      <link rel="stylesheet" type="text/css" href="./index_files/font-awesome.css">
+      <style>
+      p{
+        font-size: 150%;
+      }
+      </style>
+   </head>
+   <body style="zoom: 1;">
+      <div class="hero-unit">
+         <h1>JSON Simply Typed</h1>
+         <br>
+         <p class="tagline">Data is messy and disconnected. JSON-ST makes the data <b>easier to program</b> and connect it, creating a better Web</p>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div>
+                <h2>
+                 JSON-ST
+                </h2>
+                <p class="text-justify">JSON-ST is a lightweight Linked Data format. It
+                   is easy for developers to program and easy for humans to read and write. It is based on the already
+                   successful JSON format and provides a way to help JSON data interoperate
+                   at Web-scale. JSON-ST is an ideal data format for programming
+                   environments, REST Web services, and unstructured databases such as
+                   CouchDB and MongoDB.
+                </p>
+             </div>
+            <!-- End span -->
+            <h2 style="text-align: center;">Two Examples say it all</h2>
+
+            <div class="span6">
+               <pre>
+{
+ "<span style="color:darkorange">@type</span>": <span style="color:darkred">"https://json-ld.org/contexts/person.jsonld</span>",
+ "<span style="color:darkorange">@id</span>": "<span style="color:darkred">http://dbpedia.org/resource/John_Lennon</span>"
+ "<span style="color:darkorange">@value</span>": {
+   "<span style="color:darkorange">name</span>": <span style="color:darkblue">John Lennon"</span>,
+   "<span style="color:darkorange">born</span>": <span style="color:darkblue">"1940-10-09"</span>,
+   "<span style="color:darkorange">spouse</span>": {
+          "<span style="color:darkorange">@ref</span>": "<span style="color:darkred">http://dbpedia.org/resource/Cynthia_Lennon</span>"
+   }
+ },
+}
+</pre>
+            </div>
+            <div class="span6">
+  <pre>
+[
+  {
+    "<span style="color:darkorange">@ref</span>": "<span style="color:darkred">http://dbpedia.org/resource/John_Lennon</span>"
+  },
+  {
+    "<span style="color:darkorange">@ref</span>": "<span style="color:darkred">http://dbpedia.org/resource/Cynthia_Lennon</span>"
+  }
+]
+</pre>
+            </div>
+            <!-- End span -->
+  
+            <!-- End span -->
+         </div>
+      </div>
+      <br><br>
+      <div class="hero-unit">
+         <h2 style="text-align:center;"></span> How is JSON-ST different?</h2>
+         <div class="container">
+            <div class="row">
+               <p class="text-justify offset2 span8">
+                   <strong>JSON-ST </strong> aims to be the simplest JSON based linked data format.
+                  If formats such RDFa, RDF/XML, N3, Turtle, or JSON-LD are too complex for your project then JSON-ST may be the solution. JSON-ST values simplicity over expressivity. 
+               </p>
+             
+            </div>
+         </div>
+         <!-- End span -->
+      </div>
+      <div class="container">
+         <div id="developers" class="row">
+            <h1 class="span12" style="text-align: center;"> Syntax</h1>
+         </div>
+         <div id="developers-description" class="row">
+            <p> 
+                No extra processors or software libraries are necessary to use JSON-ST. JSON-ST specifies only four keywords:
+            </p>
+                <ul>
+               <li> <p><b>@id</b> - Used to uniquely identify things that are being described in the document with URIs </p></li>
+               <li><p><b>@type</b> -  Used to set the data type of a node or typed value. Types are uniquely identified with an URI. A node can be assigned only one type </p>
+               </li>
+                <li><p><b>@val</b> - Used to specify the data that is associated with a particular property in the graph.</p>
+                </li>
+                <li><p><b>@ref</b> - URI used to specify the data that is associated with a particular property in the graph. A smart processor may fetch the resource(@ref) and populates @val field</p>
+                </li>
+              </ul>
+         </div>
+         <hr>
+      </div>
+      <hr>
+      <div class="container">
+         <div id="footer">
+            <p id="copyright">
+               Website content released under a <a href="https://creativecommons.org/about/cc0">Creative Commons CC0 Public Domain Dedication</a> except where an alternate is specified.
+            </p>
+         </div>
+      </div>
+   </body>
+</html>
