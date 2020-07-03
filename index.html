@@ -47,18 +47,19 @@
             <div class="span6">
                <pre>
 {
- "<span style="color:darkorange">@type</span>": <span style="color:darkred">"https://json-ld.org/contexts/person.jsonld</span>",
- "<span style="color:darkorange">@id</span>": "<span style="color:darkred">http://dbpedia.org/resource/John_Lennon</span>"
+ "<span style="color:darkorange">@type</span>": <span style="color:darkred">"https://example.com/types/person.json</span>",
+ "<span style="color:darkorange">@id</span>": "<span style="color:darkred">http://example.com/resource/John_Lennon</span>"
  "<span style="color:darkorange">@value</span>": {
    "<span style="color:darkorange">name</span>": <span style="color:darkblue">John Lennon"</span>,
    "<span style="color:darkorange">born</span>": <span style="color:darkblue">"1940-10-09"</span>,
    "<span style="color:darkorange">spouse</span>": {
-          "<span style="color:darkorange">@ref</span>": "<span style="color:darkred">http://dbpedia.org/resource/Cynthia_Lennon</span>"
+          "<span style="color:darkorange">@ref</span>": "<span style="color:darkred">http://example.com/resource/Cynthia_Lennon</span>"
    }
  },
 }
 </pre>
             </div>
+            <!-- 
             <div class="span6">
   <pre>
 {
@@ -74,6 +75,7 @@
 }
 </pre>
             </div>
+            -->
             <!-- End span -->
   
             <!-- End span -->
@@ -105,9 +107,9 @@
                <li> <p><b>@id</b> - Used to uniquely identify things that are being described in the document with URIs </p></li>
                <li><p><b>@type</b> -  Used to set the data type of a node or typed value. Types are uniquely identified with an URI. A node can be assigned only one type </p>
                </li>
-                <li><p><b>@val</b> - Used to specify the data that is associated with a particular property in the graph.</p>
+                <li><p><b>@value</b> - Used to specify the data that is associated with a particular property in the graph.</p>
                 </li>
-                <li><p><b>@ref</b> - URI used to specify the data that is associated with a particular property in the graph. A smart processor may fetch the resource(@ref) and populates @val field</p>
+                <li><p><b>@ref</b> - URI used to specify the data that is associated with a particular node in the graph. A smart processor may fetch the resource(@ref) and populates node with the response @value</p>
                 </li>
               </ul>
 
@@ -117,7 +119,6 @@
          </div>
          <div id="developers-description" class="row">
                <ul>
-                     <li> <p>- Arrays may be untyped </p></li>
                      <li> <p>- Inner objects may be untyped</p></li>
                      <li> <p>- <b>@value</b> and <b>@ref</b> are mutually exclusive</p></li>
             </div>
